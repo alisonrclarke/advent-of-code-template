@@ -49,10 +49,19 @@ To run with the test input, run;
 python day<day>.py test
 ```
 
+Make sure to use the 2-digit day number as per the created file name.
+
 And to run with the main input, run:
 
 ```
 python day<day>.py
+```
+
+Sometimes (e.g. for those pesky times when your code works on the test input but not on the full input), you might want to create multiple test input files. If you create them with the naming convention `day<day>_test_input<suffix>.txt` then you can add the suffix to the command line and your new test file will be found, e.g. if you create an additional file `day07_test_input2.txt` then you can run:
+
+
+```
+python day07.py test 2
 ```
 
 ## utils

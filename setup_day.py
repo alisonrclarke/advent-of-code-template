@@ -16,7 +16,12 @@ else:
 import utils
 
 test_mode = len(sys.argv) > 1
-input_file = f'day{day:02}_test_input.txt' if test_mode else f'day{day:02}_input.txt'
+if test_mode:
+    suffix = sys.argv[2] if len(sys.argv) > 2 else ''
+    input_file = f'day{day:02}_test_input{{suffix}}.txt'
+else:
+    input_file = f'day{day:02}_input.txt'
+
 data = utils.input_as_lines(input_file)
 """
         )
